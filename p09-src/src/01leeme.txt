@@ -1,0 +1,22 @@
+Comados para ver los sockets y puertos conectados desde la consola en un sistema Linux:
+
+ss -tuln 
+    Muestra todos los sockets TCP y UDP que están escuchando
+    Las opciones significan:
+        -t: Muestra sockets TCP
+        -u: Muestra sockets UDP
+        -l: Muestra solo los sockets en estado de escucha
+        -n: Muestra números de puerto en lugar de nombres de servicios
+
+lsof: sudo lsof -i -P -n 
+    Muestra información detallada sobre las conexiones de red
+    Las opciones significan:
+        -i: Muestra conexiones de red
+        -P: No convierte números de puerto a nombres
+        -n: No convierte direcciones IP a nombres de host
+
+Usando el comando netstat (aunque está en desuso, aún es común):
+netstat -tuln 
+    Similar a ss
+
+
